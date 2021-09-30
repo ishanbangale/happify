@@ -8,7 +8,25 @@
     function getURL() {
         alert("The URL of this page is: " + window.location.href);
     }
+        
+    var url = "https://api.instagram.com/oauth/access_token";
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
+
+xhr.setRequestHeader("Content-Length", "0");
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+xhr.send();
+fcp-txaj-piv
     </script>
+    
+    
      
     <button type="button" onclick="getURL();">Get Page URL</button>
 </body>
