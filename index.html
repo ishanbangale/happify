@@ -15,7 +15,7 @@
     xhr.open("POST", url);
 
     xhr.setRequestHeader("Content-Length", "0");
-
+    console.log("in func");
     xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       console.log(xhr.status);
