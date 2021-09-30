@@ -9,18 +9,18 @@
         alert("The URL of this page is: " + window.location.href);
     }
         
-    var url = "https://api.instagram.com/oauth/access_token";
+    var url = "https://api.instagram.com/oauth/authorize/?app_id=560855811634979&redirect_uri=https://ishanbangale.github.io/&response_type=token";
 
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
 
-xhr.setRequestHeader("Content-Length", "0");
+    xhr.setRequestHeader("Content-Length", "0");
 
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
+    xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
       console.log(xhr.status);
       console.log(xhr.responseText);
-   }};
+    }};
 
 xhr.send();
 fcp-txaj-piv
