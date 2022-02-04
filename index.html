@@ -4,45 +4,6 @@
 <title>Get Current URL in JavaScript</title>
 </head>
 <body>
-    <script>
-    function getURL() {
-        alert("The URL of this page is: " + window.location.href);
-    }
-        
-   async function getShortLivedAccessToken() {
-  // sending the request.
-  let { body, statusCode } = await postAsync({
-    url: `https://api.instagram.com/oauth/access_token `,
-    formData: {
-      client_id: process.env.INSTAGRAM_APP_ID,
-      client_secret: process.env.INSTAGRAM_APP_SECRET,
-      redirect_uri: "https://httpstat.us/200",
-      code: process.env.AUTHORIZATION_CODE,
-      grant_type: "authorization_code",
-    },
-    headers: {
-      "content-type": "multipart/form-data",
-      host: "api.instagram.com",
-    },
-  });
-
-  // getting the response.
-  let response = JSON.parse(body);
-
-  // checking the status code for error.
-  if (statusCode !== 200) {
-    let error_message = response.error_message;
-    // if error exists, sending the error.
-    return new UserInputError(error_message);
-  }
-
-  // if no error exists, returning the response.
-  return response;
-}
-    </script>
-    
-    
-     
-    <button type="button" onclick="getURL();">Get Page URL</button>
+    <h1>hey</h1>
 </body>
 </html>
